@@ -1,18 +1,20 @@
-import { snowTree, desertTree, forestTree } from './trees/trees.js';
+import { snowTree, desertTree, forestTree } from './frames/tree/_tree.js';
 
-import { islandFrame } from './unique/island.js'
+import islandFrame from './frames/unique/island.js'
 
-import { forestMontain } from './mountain/_forest.js'
+import { forestMontain, icyMountain } from './frames/mountain/_mountain.js'
 
-import { icyMountain } from './mountain/_snow.js'
+import { car1, car2 } from './frames/car/_car.js'
 
-import { frame1, frame2 } from './car/car.js'
+import cloudFrame from './frames/unique/cloud.js'
 
-import { moonFrame } from './unique/moon.js'
+import { Sun } from './classes/sun/sun.js';
 
-import { sun1, sun2, sun3 } from './sun/sun.js';
+import { Moon } from './classes/moon/moon.js';
 
-import cloudFrame from './unique/cloud.js'
+const sun = new Sun();
+
+const moon = new Moon();
 
 var currentScenery = 2;
 var currentColor = 2;
@@ -21,10 +23,6 @@ var currentSpeed = 2;
 var carSpeed = 50;
 
 var car = document.querySelector(".car");
-
-var sun = document.querySelector(".sun");
-
-var moon = document.querySelector(".moon");
 
 var island = document.querySelector(".island");
 
@@ -64,8 +62,10 @@ function background() {
             document.documentElement.style.setProperty('--sea', 'linear-gradient(180deg, rgb(120, 1, 255), rgb(0, 174, 255), rgb(12, 255, 133))');
             island.style["display"] = 'block';
             mountain.style["display"] = 'none';
-            sun.style["display"] = 'none';
-            moon.style["display"] = 'none';
+
+            sun.hide();
+            moon.hide();
+
             for (let cloud of clouds) {
                 cloud.style["display"] = 'none';
             }
@@ -78,8 +78,9 @@ function background() {
             mountain.style["boxShadow"] = icyMountain;
             mountain.style["display"] = 'block';
             island.style["display"] = 'none';
-            sun.style["display"] = 'none';
-            moon.style["display"] = 'none';
+
+            sun.hide();
+            moon.hide();
 
             for (let cloud of clouds) {
                 cloud.style["display"] = 'block';
@@ -94,8 +95,10 @@ function background() {
             document.documentElement.style.setProperty('--sea', 'linear-gradient(180deg, rgb(29, 63, 175), rgb(11, 96, 255), rgb(12, 178, 255))');
             island.style["display"] = 'none';
             mountain.style["display"] = 'block';
-            sun.style["display"] = 'block';
-            moon.style["display"] = 'none';
+
+            sun.show();
+            moon.hide();
+
             for (let cloud of clouds) {
                 cloud.style["display"] = 'block';
             }
@@ -107,8 +110,10 @@ function background() {
             document.documentElement.style.setProperty('--sea', 'linear-gradient(180deg, rgb(8, 27, 92), rgb(12, 60, 148), rgb(7, 81, 116))');
             island.style["display"] = 'none';
             mountain.style["display"] = 'none';
-            sun.style["display"] = 'none';
-            moon.style["display"] = 'block';
+
+            sun.hide();
+            moon.show();
+
             for (let cloud of clouds) {
                 cloud.style["display"] = 'block';
             }
@@ -255,54 +260,32 @@ function setOnInit() {
 
     island.style["boxShadow"] = islandFrame;
 
-    moon.style["boxShadow"] = moonFrame;
-
     for (let cloud of clouds) cloud.style["boxShadow"] = cloudFrame;
 
     frameCarStart();
 
-    frameSunStart();
+    // frameSunStart();
 }
 
 function frameCarStart() {
-    car.style["boxShadow"] = frame1;
+    car.style["boxShadow"] = car1;
     setTimeout(function () {
         frameCarEnd();
     }, carSpeed);
 }
 
 function frameCarEnd() {
-    car.style["boxShadow"] = frame2;
+    car.style["boxShadow"] = car2;
     setTimeout(function () {
         frameCarStart();
     }, carSpeed);
 }
 
-function frameSunStart() {
-    sun.style["boxShadow"] = sun1;
-    setTimeout(function () {
-        frameSunMiddle();
-    }, 100);
-}
-
-function frameSunMiddle() {
-    sun.style["boxShadow"] = sun2;
-    setTimeout(function () {
-        frameSunEnd();
-    }, 100);
-}
-
-function frameSunEnd() {
-    sun.style["boxShadow"] = sun3;
-    setTimeout(function () {
-        frameSunStart();
-    }, 100);
-}
 
 // var frame8 = '40px 5px 0 #000000,45px 5px 0 #000000,35px 10px 0 #000000,40px 10px 0 #FFFF00,45px 10px 0 #FFFF00,50px 10px 0 #000000,35px 15px 0 #000000,40px 15px 0 #FFFF00,45px 15px 0 #FFFF00,50px 15px 0 #000000,30px 20px 0 #000000,35px 20px 0 #FFFF00,40px 20px 0 #FFFF00,45px 20px 0 #FFFF00,50px 20px 0 #FFFF00,55px 20px 0 #000000,5px 25px 0 #000000,10px 25px 0 #000000,15px 25px 0 #000000,20px 25px 0 #000000,25px 25px 0 #000000,30px 25px 0 #000000,35px 25px 0 #FFFF00,40px 25px 0 #FFFF00,45px 25px 0 #FFFF00,50px 25px 0 #FFFF00,55px 25px 0 #000000,60px 25px 0 #000000,65px 25px 0 #000000,70px 25px 0 #000000,75px 25px 0 #000000,80px 25px 0 #000000,5px 30px 0 #000000,10px 30px 0 #FFFF00,15px 30px 0 #FFFF00,20px 30px 0 #FFFF00,25px 30px 0 #FFFF00,30px 30px 0 #FFFF00,35px 30px 0 #FFFF00,40px 30px 0 #FFFF00,45px 30px 0 #FFFF00,50px 30px 0 #FFFF00,55px 30px 0 #FFFF00,60px 30px 0 #FFFF00,65px 30px 0 #FFFF00,70px 30px 0 #FFFF00,75px 30px 0 #FFFF00,80px 30px 0 #000000,10px 35px 0 #000000,15px 35px 0 #FFFF00,20px 35px 0 #FFFF00,25px 35px 0 #FFFF00,30px 35px 0 #FFFF00,35px 35px 0 #FFFF00,40px 35px 0 #FFFF00,45px 35px 0 #FFFF00,50px 35px 0 #FFFF00,55px 35px 0 #FFFF00,60px 35px 0 #FFFF00,65px 35px 0 #FFFF00,70px 35px 0 #FFFF00,75px 35px 0 #000000,15px 40px 0 #000000,20px 40px 0 #FFFF00,25px 40px 0 #FFFF00,30px 40px 0 #FFFF00,35px 40px 0 #FFFF00,40px 40px 0 #FFFF00,45px 40px 0 #FFFF00,50px 40px 0 #FFFF00,55px 40px 0 #FFFF00,60px 40px 0 #FFFF00,65px 40px 0 #FFFF00,70px 40px 0 #000000,75px 40px 0 #FFFF00,80px 40px 0 #FFFF00,85px 40px 0 #FFFF00,90px 40px 0 #FFFF00,95px 40px 0 #FFFF00,100px 40px 0 #FFFF00,105px 40px 0 #FFFF00,110px 40px 0 #FFFF00,115px 40px 0 #FFFF00,120px 40px 0 #FFFF00,125px 40px 0 #FFFF00,130px 40px 0 #FFFF00,135px 40px 0 #FFFF00,140px 40px 0 #FFFF00,145px 40px 0 #FFFF00,150px 40px 0 #FFFF00,155px 40px 0 #FFFF00,160px 40px 0 #FFFF00,165px 40px 0 #FFFF00,170px 40px 0 #FFFF00,175px 40px 0 #FFFF00,180px 40px 0 #FFFF00,185px 40px 0 #FFFF00,190px 40px 0 #FFFF00,195px 40px 0 #FFFF00,200px 40px 0 #FFFF00,20px 45px 0 #000000,25px 45px 0 #FFFF00,30px 45px 0 #FFFF00,35px 45px 0 #FFFF00,40px 45px 0 #FFFF00,45px 45px 0 #FFFF00,50px 45px 0 #FFFF00,55px 45px 0 #FFFF00,60px 45px 0 #FFFF00,65px 45px 0 #000000,70px 45px 0 #FFFF00,75px 45px 0 #FFFF00,80px 45px 0 #FFFF00,85px 45px 0 #FFFF00,90px 45px 0 #FFFF00,95px 45px 0 #FFFF00,100px 45px 0 #FFFF00,105px 45px 0 #FFFF00,110px 45px 0 #FFFF00,115px 45px 0 #FFFF00,120px 45px 0 #FFFF00,125px 45px 0 #FFFF00,130px 45px 0 #FFFF00,135px 45px 0 #FFFF00,140px 45px 0 #FFFF00,145px 45px 0 #FFFF00,150px 45px 0 #FFFF00,155px 45px 0 #FFFF00,160px 45px 0 #FFFF00,165px 45px 0 #FFFF00,170px 45px 0 #FFFF00,175px 45px 0 #FFFF00,180px 45px 0 #FFFF00,185px 45px 0 #FFFF00,190px 45px 0 #FFFF00,195px 45px 0 #FFFF00,20px 50px 0 #000000,25px 50px 0 #FFFF00,30px 50px 0 #FFFF00,35px 50px 0 #FFFF00,40px 50px 0 #FFFF00,45px 50px 0 #FFFF00,50px 50px 0 #FFFF00,55px 50px 0 #FFFF00,60px 50px 0 #FFFF00,65px 50px 0 #000000,70px 50px 0 #FFFF00,75px 50px 0 #FFFF00,80px 50px 0 #FFFF00,85px 50px 0 #FFFF00,90px 50px 0 #FFFF00,95px 50px 0 #FFFF00,100px 50px 0 #FFFF00,105px 50px 0 #FFFF00,110px 50px 0 #FFFF00,115px 50px 0 #FFFF00,120px 50px 0 #FFFF00,125px 50px 0 #FFFF00,130px 50px 0 #FFFF00,135px 50px 0 #FFFF00,140px 50px 0 #FFFF00,145px 50px 0 #FFFF00,150px 50px 0 #FFFF00,155px 50px 0 #FFFF00,160px 50px 0 #FFFF00,165px 50px 0 #FFFF00,170px 50px 0 #FFFF00,175px 50px 0 #FFFF00,180px 50px 0 #FFFF00,185px 50px 0 #FFFF00,190px 50px 0 #FFFF00,15px 55px 0 #000000,20px 55px 0 #FFFF00,25px 55px 0 #FFFF00,30px 55px 0 #FFFF00,35px 55px 0 #FFFF00,40px 55px 0 #FFFF00,45px 55px 0 #FFFF00,50px 55px 0 #FFFF00,55px 55px 0 #FFFF00,60px 55px 0 #FFFF00,65px 55px 0 #FFFF00,70px 55px 0 #000000,75px 55px 0 #FFFF00,80px 55px 0 #FFFF00,85px 55px 0 #FFFF00,90px 55px 0 #FFFF00,95px 55px 0 #FFFF00,100px 55px 0 #FFFF00,105px 55px 0 #FFFF00,110px 55px 0 #FFFF00,115px 55px 0 #FFFF00,120px 55px 0 #FFFF00,125px 55px 0 #FFFF00,130px 55px 0 #FFFF00,135px 55px 0 #FFFF00,140px 55px 0 #FFFF00,145px 55px 0 #FFFF00,150px 55px 0 #FFFF00,155px 55px 0 #FFFF00,160px 55px 0 #FFFF00,165px 55px 0 #FFFF00,170px 55px 0 #FFFF00,175px 55px 0 #FFFF00,180px 55px 0 #FFFF00,185px 55px 0 #FFFF00,15px 60px 0 #000000,20px 60px 0 #FFFF00,25px 60px 0 #FFFF00,30px 60px 0 #FFFF00,35px 60px 0 #FFFF00,40px 60px 0 #FFFF00,45px 60px 0 #FFFF00,50px 60px 0 #FFFF00,55px 60px 0 #FFFF00,60px 60px 0 #FFFF00,65px 60px 0 #FFFF00,70px 60px 0 #000000,10px 65px 0 #000000,15px 65px 0 #FFFF00,20px 65px 0 #FFFF00,25px 65px 0 #FFFF00,30px 65px 0 #FFFF00,35px 65px 0 #FFFF00,40px 65px 0 #000000,45px 65px 0 #000000,50px 65px 0 #FFFF00,55px 65px 0 #FFFF00,60px 65px 0 #FFFF00,65px 65px 0 #FFFF00,70px 65px 0 #FFFF00,75px 65px 0 #000000,10px 70px 0 #000000,15px 70px 0 #FFFF00,20px 70px 0 #FFFF00,25px 70px 0 #FFFF00,30px 70px 0 #000000,35px 70px 0 #000000,50px 70px 0 #000000,55px 70px 0 #000000,60px 70px 0 #FFFF00,65px 70px 0 #FFFF00,70px 70px 0 #FFFF00,75px 70px 0 #000000,5px 75px 0 #000000,10px 75px 0 #FFFF00,15px 75px 0 #FFFF00,20px 75px 0 #000000,25px 75px 0 #000000,60px 75px 0 #000000,65px 75px 0 #000000,70px 75px 0 #FFFF00,75px 75px 0 #FFFF00,80px 75px 0 #000000,5px 80px 0 #000000,10px 80px 0 #000000,15px 80px 0 #000000,70px 80px 0 #000000,75px 80px 0 #000000,80px 80px 0 #000000';
- 
- 
- 
+
+
+
 
 function forest() {
 
