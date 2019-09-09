@@ -1,4 +1,4 @@
-import { cloudFrame } from '../../frames/frames.js';
+import { cloudFrame } from '../../providers/frames.js';
 
 export class Cloud {
 

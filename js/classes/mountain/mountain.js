@@ -1,4 +1,4 @@
-import { forestMontain, icyMountain } from '../../frames/frames.js';
+import { forestMontain, icyMountain } from '../../providers/frames.js';
 
 export class Mountain {
 

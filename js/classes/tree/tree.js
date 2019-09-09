@@ -1,4 +1,4 @@
-import { snowTree, desertTree, forestTree } from '../../frames/frames.js';
+import { snowTree, desertTree, forestTree } from '../../providers/frames.js';
 
 export class Tree {
 

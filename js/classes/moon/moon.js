@@ -1,4 +1,4 @@
-import { moonFrame } from '../../frames/frames.js';
+import { moonFrame } from '../../providers/frames.js';
 
 export class Moon {
 

@@ -1,4 +1,4 @@
-import { sun1, sun2, sun3 } from '../../frames/frames.js';
+import { sun1, sun2, sun3 } from '../../providers/frames.js';
 
 export class Sun {
 

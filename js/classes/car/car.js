@@ -1,4 +1,4 @@
-import { car1, car2 } from '../../frames/frames.js';
+import { car1, car2 } from '../../providers/frames.js';
 
 export class Car {
 
@@ -19,16 +19,13 @@ export class Car {
     }
 
     nextFrame(f = 1) {
-
         this._ref.style["boxShadow"] = f == 1 ? car1 : car2;
-
         setTimeout(() => this.nextFrame(f > 1 ? --f : ++f), this.speed);
     }
 
     hide() {
         this._ref.style["display"] = 'none';
     }
-
 
     show() {
         this._ref.style["display"] = 'block';

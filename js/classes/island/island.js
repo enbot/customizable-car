@@ -1,4 +1,4 @@
-import { islandFrame } from '../../frames/unique/_island.js';
+import { islandFrame } from '../../providers/frames/_island.js';
 
 export class Island {
 
