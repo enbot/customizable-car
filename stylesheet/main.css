@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Play');
+@import url('./variables.css');
+@import url('./buttons.css');
+@import url('./keyframes.css');
+@import url('./objects.css');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Play', sans-serif;
+    background-color: var(--ground-color);
+    background-image: var(--ground);
+    background-size: 25px 25px;
+}

@@ -1,0 +1,68 @@
+.button {
+    user-select: none;
+    color: #FFFFFF;
+    text-shadow: 3px 3px 2px #A4A4A4;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 50px;
+    width: 180px;
+    font-size: 25px;
+    border-radius: 35px;
+    z-index: 666;
+}
+
+.button:hover::before {
+    right: 1px;
+    bottom: 1px;
+}
+
+.button:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 2px #A4A4A4;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    height: 50px;
+    width: 180px;
+    border-radius: 35px;
+    background: transparent;
+    z-index: 667;
+    border: solid 3px #A4A4A4;
+}
+
+.button:active {
+    color: #010101;
+    text-shadow: 2px 2px 2px rgb(27, 27, 27);
+    background-image: repeating-linear-gradient(45deg, #fcce00, #fcce00 0.5em, #f2ff3c 0.5em, #f2ff3c 1em) !important;
+}
+
+.button:nth-child(1) {
+    right: 10px;
+    bottom: 10px;
+    background-image: repeating-linear-gradient(45deg, #77005d, #77005d 0.5em, #530041 0.5em, #530041 1em);
+}
+
+.button:nth-child(2) {
+    right: 210px;
+    bottom: 10px;
+    background-image: repeating-linear-gradient(45deg, #880e0e, #880e0e 0.5em, #600000 0.5em, #600000 1em);
+}
+
+.button:nth-child(3) {
+    right: 410px;
+    bottom: 10px;
+    background-image: repeating-linear-gradient(45deg, #08345a, #08345a 0.5em, #001e38 0.5em, #001e38 1em);
+}
+
+.button:nth-child(4) {
+    right: 610px;
+    bottom: 10px;
+    background-image: repeating-linear-gradient(45deg, #085a0c, #085a0c 0.5em, #00380e 0.5em, #00380e 1em);
+}
