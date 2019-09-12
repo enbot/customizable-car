@@ -3,6 +3,7 @@
 @import url('./buttons.css');
 @import url('./keyframes.css');
 @import url('./objects.css');
+@import url('./media.css');
 
 html, body {
     margin: 0;
