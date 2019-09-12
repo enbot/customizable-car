@@ -8,4 +8,4 @@ document.querySelector("#button-scenery").addEventListener("click", screen.nextS
 
 document.querySelector("#button-background").addEventListener("click", screen.nextBackground, false);
 
-document.querySelector("#button-carcolor").addEventListener("click", screen.car.nextcolor, false);
+document.querySelector("#button-carcolor").addEventListener("click", screen.nextColor, false);

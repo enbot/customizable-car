@@ -9,13 +9,9 @@ export class Car {
     speed = 50;
 
     constructor() {
-
         this._ref = document.querySelector(".car");
-
         this.nextColor();
-
         this.nextFrame();
-
     }
 
     nextFrame(f = 1) {
