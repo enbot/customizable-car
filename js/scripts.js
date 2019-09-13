@@ -1,4 +1,4 @@
-import Screen from './classes/main.js';
+import Screen from './classes/screen.js';
 
 const screen = new Screen();
 
