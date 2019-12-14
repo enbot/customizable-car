@@ -1,0 +1,7 @@
+@media only screen and (min-width: 1360px) {
+    .mountain {
+        bottom: 1100px;
+        transform: scale(11);
+        left: -50px;
+    }
+}
