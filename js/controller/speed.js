@@ -1,8 +1,7 @@
 export class Speed {
 
-    speed = 2
-
     constructor(fence, tree, cloud, ink, car, indicator) {
+        this.speed = 2
         this._fence = fence
         this._tree = tree
         this._cloud = cloud
@@ -22,8 +21,8 @@ export class Speed {
                 this._car.setSpeed("slow")
                 this._indicator.setSpeed('slow')
                 this.speed = 2
-
                 break
+
             case 2:
                 this._fence.setSpeed('medium')
                 this._tree.setSpeed('medium')

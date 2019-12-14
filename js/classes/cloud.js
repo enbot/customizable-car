@@ -9,7 +9,6 @@ export class Cloud extends Abstract {
             document.querySelector(".cloud-2"),
             document.querySelector(".cloud-3")
         ]
-
         this.style('boxShadow', cloudFrame)
     }
 

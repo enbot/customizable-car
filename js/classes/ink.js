@@ -19,5 +19,4 @@ export class Ink extends Abstract {
                 break
         }
     }
-
 }

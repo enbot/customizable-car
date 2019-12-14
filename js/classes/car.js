@@ -3,30 +3,23 @@ import { Abstract } from './abstract.js'
 
 export class Car extends Abstract {
 
-    color = 2
-
-    speed = 50
 
     constructor() {
-
         super()._ref = document.querySelector(".car")
-
+        this.color = 2
+        this.speed = 50
         this.nextColor()
-
         this.nextFrame()
     }
 
     nextFrame(frameIndex = 1) {
-
         this.style('boxShadow', frameIndex === 1 ? car1 : car2)
-
         setTimeout(() =>
             this.nextFrame(
                 frameIndex == 1 ?
                     ++frameIndex :
                     --frameIndex
             ), this.speed)
-
     }
 
     setSpeed(speed) {

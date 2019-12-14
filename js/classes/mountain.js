@@ -7,8 +7,11 @@ export class Mountain extends Abstract {
         super()._ref = document.querySelector(".mountain")
     }
 
-    forest = () => this.style('boxShadow', forestMontain)
+    forest() {
+        this.style('boxShadow', forestMontain)
+    }
 
-    icy = () => this.style('boxShadow', icyMountain)
-
+    icy() {
+        this.style('boxShadow', icyMountain)
+    }
 }

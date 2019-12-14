@@ -2,8 +2,6 @@ import { setIsle, setForest, setIcy, setNight } from '../providers/providers.js'
 
 export class Background {
 
-
-
     constructor(sun, moon, mountain, island, cloud) {
         this.background = 2
         this._sun = sun
@@ -58,5 +56,4 @@ export class Background {
                 break
         }
     }
-
 }

@@ -15,55 +15,62 @@ import { Speed } from '../controller/speed.js'
 
 export default class Screen {
 
-    tree = new Tree()
-    sun = new Sun()
-    moon = new Moon()
-    mountain = new Mountain()
-    island = new Island()
-    cloud = new Cloud()
-    car = new Car()
-    fence = new Fence()
-    ink = new Ink()
-    indicator = new Indicator()
+    constructor() {
 
-    BACKGROUND_CONTROLLER = new Background(
-        this.sun,
-        this.moon,
-        this.mountain,
-        this.island,
-        this.cloud
-    )
+        this.tree = new Tree()
+        this.sun = new Sun()
+        this.moon = new Moon()
+        this.mountain = new Mountain()
+        this.island = new Island()
+        this.cloud = new Cloud()
+        this.car = new Car()
+        this.fence = new Fence()
+        this.ink = new Ink()
+        this.indicator = new Indicator()
 
-    SCENERY_CONTROLLER = new Scenery(
-        this.tree
-    )
+        this.BACKGROUND_CONTROLLER = new Background(
+            this.sun,
+            this.moon,
+            this.mountain,
+            this.island,
+            this.cloud
+        )
 
-    SPEED_CONTROLLER = new Speed(
-        this.fence,
-        this.tree,
-        this.cloud,
-        this.ink,
-        this.car,
-        this.indicator
-    )
+        this.SCENERY_CONTROLLER = new Scenery(
+            this.tree
+        )
 
-    constructor() { this.init() }
+        this.SPEED_CONTROLLER = new Speed(
+            this.fence,
+            this.tree,
+            this.cloud,
+            this.ink,
+            this.car,
+            this.indicator
+        )
+
+        this.init()
+    }
 
     init() {
-
         this.nextBackground()
-
         this.nextSpeed()
-
         this.nextScenery()
     }
 
-    nextColor = () => this.car.nextColor()
+    nextColor() {
+        this.car.nextColor()
+    }
 
-    nextSpeed = () => this.SPEED_CONTROLLER.next()
+    nextSpeed() {
+        this.SPEED_CONTROLLER.next()
+    }
 
-    nextScenery = () => this.SCENERY_CONTROLLER.next()
+    nextScenery() {
+        this.SCENERY_CONTROLLER.next()
+    }
 
-    nextBackground = () => this.BACKGROUND_CONTROLLER.next()
-
+    nextBackground() {
+        this.BACKGROUND_CONTROLLER.next()
+    }
 }

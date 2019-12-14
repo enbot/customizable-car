@@ -23,6 +23,7 @@ export class Indicator extends Abstract {
         }
     }
 
-    setText = (newText) => this._ref.textContent = newText
-
+    setText(newText) {
+        this._ref.textContent = newText
+    }
 }

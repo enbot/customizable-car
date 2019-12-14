@@ -2,9 +2,8 @@ import { setForestGround, setIcyGround, setDesertGround } from '../providers/pro
 
 export class Scenery {
 
-    scenery = 2
-
     constructor(tree) {
+        this.scenery = 2
         this._tree = tree
     }
 
