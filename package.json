@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enbot/customizable-car.git"
+    "url": "git+https://github.com/notelho/customizable-car.git"
   },
   "keywords": [
     "car",
@@ -18,9 +18,9 @@
   "author": "Nathan Botelho",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/enbot/customizable-car/issues"
+    "url": "https://github.com/notelho/customizable-car/issues"
   },
-  "homepage": "https://github.com/enbot/customizable-car#readme",
+  "homepage": "https://github.com/notelho/customizable-car#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
