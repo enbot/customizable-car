@@ -7,36 +7,16 @@ export function create() {
             'B', 'o', 't', 'e', 'l', 'h', 'o'
         ],
         buttons = [
-            // <div class="button" id="button-scenery"> Scenery </div>
-            // <div class="button" id="button-background"> Background </div>
-            // <div class="button" id="button-carcolor"> Car color </div>
-            // <div class="button" id="button-speed"> Speed </div>
+            { id: 'button-scenery', text: 'Scenery' },
+            { id: 'button-background', text: 'Background' },
+            { id: 'button-carcolor', text: 'Car color' },
+            { id: 'button-speed', text: 'Speed' }
         ],
         text = [],
         elements = [
-            // <div class="speed"></div>
-            // <div class="sky"></div>
-            // <div class="sea"></div>
-
-            // <div class="cloud-1"></div>
-            // <div class="cloud-2"></div>
-            // <div class="cloud-3"></div>
-
-            // <div class="mountain"></div>
-            // <div class="sun"></div>
-            // <div class="moon"></div>
-            // <div class="island"></div>
-
-            // <div class="fence"></div>
-            // <div class="road"></div>
-            // <div class="ink"></div>
-
-            // <div class="tree-1"></div>
-            // <div class="tree-2"></div>
-            // <div class="tree-3"></div>
-            // <div class="tree-4"></div>
-
-            // <div class="car"></div>
+            'speed', 'sky', 'sea', 'cloud-1', 'cloud-2', 'cloud-3',
+            'mountain', 'sun', 'moon', 'island', 'fence', 'road', 'ink',
+            'tree-1', 'tree-2', 'tree-3', 'tree-4', 'car'
         ],
         log = ''
 
@@ -48,25 +28,30 @@ export function create() {
             characters[i]
     }
 
-    console.log(log)
+    const hud = document.getElementById('hud')
 
-    //  // Create anchor element. 
-    //  var a = document.createElement('a');  
+    for (let button of buttons) {
+        let div = document.createElement('div');
+        div.id = button.id
+        div.innerHTML = button.text
+        div.classList = 'button'
+        hud.appendChild(div)
+    }
 
-    //  // Create the text node for anchor element. 
-    //  var link = document.createTextNode("This is link"); 
+    for (let element of elements) {
+        let div = document.createElement('div');
+        div.classList = element
+        hud.appendChild(div)
+    }
 
-    //  // Append the text node to anchor element. 
+    // var link = document.createElement('a')
+    //  var link = document.createTextNode("Thi,s is link"); 
     //  a.appendChild(link);  
-
-    //  // Set the title. 
     //  a.title = "This is Link";  
-
-    //  // Set the href property. 
     //  a.href = "https://www.geeksforgeeks.org";  
-
-    //  // Append the anchor element to the body. 
     //  document.body.appendChild(a);  
+
+    console.log(log)
 
 
 }

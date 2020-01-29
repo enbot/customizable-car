@@ -14,67 +14,23 @@ document.querySelector("#button-background")
 document.querySelector("#button-carcolor")
     .addEventListener("click", () => screen.nextColor(), false)
 
-function run(command, time = 15) {
-    return new Promise(
-        resolve => setTimeout(resolve, time)
-    ).then(() => screen[command]())
-}
-
 function demo() {
 
-    // let chain = [
-    //     [],
-    //     [],
-    //     [],
-    // ]
+    let chain = [
+        ['nextBackground', 'nextScenery', 'nextColor', 'nextColor',],
+        ['nextBackground', 'nextBackground', 'nextScenery', 'nextColor', 'nextColor',],
+        ['nextBackground', 'nextScenery', 'nextColor', 'nextColor', 'nextColor', 'nextColor',],
+    ]
 
-    // for (let commands of chain) {
+    let timer = 2000
 
-    //     for (let command of commands) {
-
-
-
-    //     }
-
-    // }
-
-    // nextScenery
-    // nextBackground
-    // nextColor
-
-    setTimeout(async () => {
-
-        await run('nextBackground')
-        await run('nextScenery')
-        await run('nextColor')
-        await run('nextColor')
-
-        setTimeout(async () => {
-
-            await run('nextBackground')
-            await run('nextBackground')
-            await run('nextScenery')
-            await run('nextColor')
-            await run('nextColor')
-
-            setTimeout(async () => {
-
-                await run('nextBackground')
-                await run('nextScenery')
-                await run('nextColor')
-                await run('nextColor')
-                await run('nextColor')
-                await run('nextColor')
-
-            }, 2000)
-
-        }, 2000)
-
-    }, 2000)
-
-
-
-    // 3 car color 1bg 1
+    for (let commands of chain) {
+        setTimeout(() => {
+            for (let command of commands)
+                screen[command]()
+        }, timer)
+        timer += 2000
+    }
 
 }
 
