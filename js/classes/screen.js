@@ -13,9 +13,13 @@ import { Background } from '../controller/background.js'
 import { Scenery } from '../controller/scenery.js'
 import { Speed } from '../controller/speed.js'
 
+import { create } from '../providers/providers.js'
+
 export default class Screen {
 
     constructor() {
+
+        create()
 
         this.tree = new Tree()
         this.sun = new Sun()

@@ -1,4 +1,5 @@
 .history
 .vscode
+old
 node_modules
 dist
