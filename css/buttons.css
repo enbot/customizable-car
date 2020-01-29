@@ -43,25 +43,25 @@
     background-image: repeating-linear-gradient(45deg, #fcce00, #fcce00 0.5em, #f2ff3c 0.5em, #f2ff3c 1em) !important;
 }
 
-.button:nth-child(1) {
+.button#button-scenery {
     right: 10px;
     bottom: 10px;
     background-image: repeating-linear-gradient(45deg, #77005d, #77005d 0.5em, #530041 0.5em, #530041 1em);
 }
 
-.button:nth-child(2) {
+.button#button-background {
     right: 210px;
     bottom: 10px;
     background-image: repeating-linear-gradient(45deg, #880e0e, #880e0e 0.5em, #600000 0.5em, #600000 1em);
 }
 
-.button:nth-child(3) {
+.button#button-carcolor {
     right: 410px;
     bottom: 10px;
     background-image: repeating-linear-gradient(45deg, #08345a, #08345a 0.5em, #001e38 0.5em, #001e38 1em);
 }
 
-.button:nth-child(4) {
+.button#button-speed {
     right: 610px;
     bottom: 10px;
     background-image: repeating-linear-gradient(45deg, #085a0c, #085a0c 0.5em, #00380e 0.5em, #00380e 1em);
