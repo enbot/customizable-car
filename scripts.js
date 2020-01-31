@@ -5,8 +5,8 @@ const screen = new Screen()
 function demo() {
 
     let chain = [
-        ['nextBackground', 'nextScenery', 'nextColor', 'nextColor',],
         ['nextBackground', 'nextBackground', 'nextScenery', 'nextColor', 'nextColor',],
+        ['nextBackground', 'nextScenery', 'nextColor', 'nextColor',],
         ['nextBackground', 'nextScenery', 'nextColor', 'nextColor', 'nextColor', 'nextColor',],
     ]
 

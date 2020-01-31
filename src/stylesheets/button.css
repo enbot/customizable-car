@@ -49,25 +49,25 @@
 .button#button-scenery {
     right: 10px;
     bottom: 10px;
-    background-image: repeating-linear-gradient(45deg, #77005d, #77005d 0.5em, #530041 0.5em, #530041 1em);
+    background-image: repeating-linear-gradient(45deg, #77005d, #77005d 0.5em, #680051 0.5em, #680051 1em);
 }
 
 .button#button-background {
     right: 210px;
     bottom: 10px;
-    background-image: repeating-linear-gradient(45deg, #880e0e, #880e0e 0.5em, #600000 0.5em, #600000 1em);
+    background-image: repeating-linear-gradient(45deg, #880e0e, #880e0e 0.5em, #770a0a 0.5em, #770a0a 1em);
 }
 
 .button#button-carcolor {
     right: 410px;
     bottom: 10px;
-    background-image: repeating-linear-gradient(45deg, #08345a, #08345a 0.5em, #001e38 0.5em, #001e38 1em);
+    background-image: repeating-linear-gradient(45deg, #08345a, #08345a 0.5em, #042d52 0.5em, #042d52 1em);
 }
 
 .button#button-speed {
     right: 610px;
     bottom: 10px;
-    background-image: repeating-linear-gradient(45deg, #087238, #087238 0.5em, #055c2c 0.5em, #055c2c 1em);
+    background-image: repeating-linear-gradient(45deg, #087228, #087228 0.5em, #066423 0.5em, #066423 1em);
 }
 
 .button.hidden{
