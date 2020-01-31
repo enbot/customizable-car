@@ -4,6 +4,7 @@
 @import url('./keyframes.css');
 @import url('./objects.css');
 @import url('./media.css');
+@import url('./corner.css');
 
 html, body {
     margin: 0;

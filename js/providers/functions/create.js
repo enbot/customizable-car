@@ -28,7 +28,7 @@ export function create() {
             characters[i]
     }
 
-    const hud = document.getElementById('hud')
+    const hud = document.getElementById('hud')  
 
     for (let button of buttons) {
         let div = document.createElement('div');
@@ -44,14 +44,6 @@ export function create() {
         hud.appendChild(div)
     }
 
-    // var link = document.createElement('a')
-    //  var link = document.createTextNode("Thi,s is link"); 
-    //  a.appendChild(link);  
-    //  a.title = "This is Link";  
-    //  a.href = "https://www.geeksforgeeks.org";  
-    //  document.body.appendChild(a);  
-
     console.log(log)
-
 
 }
