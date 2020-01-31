@@ -9,13 +9,13 @@ import { Fence } from './fence.js'
 import { Ink } from './ink.js'
 import { Indicator } from './indicator.js'
 
-import { Background } from '../controller/background.js'
-import { Scenery } from '../controller/scenery.js'
-import { Speed } from '../controller/speed.js'
+import { Background } from '../../provider.js'
+import { Scenery } from '../../provider.js'
+import { Speed } from '../../provider.js'
 
-import { create } from '../providers/providers.js'
+import { create } from '../../provider.js'
 
-export default class Screen {
+export class Screen {
 
     constructor() {
 

@@ -1,4 +1,4 @@
-import { setCssProperties } from '../providers.js'
+import { setCssProperties } from '../provider.js'
 
 export const setForestGround = () => setCssProperties([
     { p: '--ground-color', v: '#1D4F11' },

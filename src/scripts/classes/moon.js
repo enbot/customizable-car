@@ -1,4 +1,4 @@
-import { moonFrame } from '../providers/providers.js'
+import { moonFrame }  from '../../provider.js'
 import { Abstract } from './abstract.js'
 
 export class Moon extends Abstract {

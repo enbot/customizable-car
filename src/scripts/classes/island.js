@@ -1,4 +1,4 @@
-import { islandFrame } from '../providers/providers.js'
+import { islandFrame } from '../../provider.js'
 import { Abstract } from './abstract.js'
 
 export class Island extends Abstract {

@@ -1,4 +1,4 @@
-import { cloudFrame } from '../providers/providers.js'
+import { cloudFrame } from '../../provider.js'
 import { Abstract } from './abstract.js'
 
 export class Cloud extends Abstract {

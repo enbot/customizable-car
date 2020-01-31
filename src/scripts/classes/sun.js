@@ -1,4 +1,4 @@
-import { sun1, sun2, sun3 } from '../providers/providers.js'
+import { sun1, sun2, sun3 } from '../../provider.js'
 import { Abstract } from './abstract.js'
 
 export class Sun extends Abstract {

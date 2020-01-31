@@ -1,4 +1,4 @@
-import { setIsle, setForest, setIcy, setNight } from '../providers/providers.js'
+import { setIsle, setForest, setIcy, setNight } from '../../provider.js'
 
 export class Background {
 

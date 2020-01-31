@@ -1,4 +1,4 @@
-import { snowTree, desertTree, forestTree } from '../providers/providers.js'
+import { snowTree, desertTree, forestTree } from '../../provider.js'
 import { Abstract } from './abstract.js'
 
 export class Tree extends Abstract {

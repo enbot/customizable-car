@@ -1,4 +1,4 @@
-import Screen from './classes/screen.js'
+import { Screen } from './src/provider.js'
 
 const screen = new Screen()
 
@@ -12,7 +12,7 @@ function demo() {
 
     let start = 3000
     let frames = 2000
-    let timer = frames
+    let timer = start
 
     for (let commands of chain) {
         setTimeout(() => {
@@ -40,7 +40,7 @@ function demo() {
         carcolor.classList.toggle('hidden')
         carcolor.addEventListener("click", () => screen.nextColor(), false)
 
-    }, frames * chain.length)
+    }, start + (frames * (chain.length - 1)))
 
 }
 

@@ -1,4 +1,4 @@
-import { setCssProperties } from '../providers.js'
+import { setCssProperties } from '../provider.js'
 
 export const setIsle = () => setCssProperties([
     { p: '--sea-border', v: 'solid 2px #661AFF' },

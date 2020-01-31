@@ -1,4 +1,4 @@
-import { forestMontain, icyMountain } from '../providers/providers.js'
+import { forestMontain, icyMountain } from '../../provider.js'
 import { Abstract } from './abstract.js'
 
 export class Mountain extends Abstract {

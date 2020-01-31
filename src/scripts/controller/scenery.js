@@ -1,4 +1,4 @@
-import { setForestGround, setIcyGround, setDesertGround } from '../providers/providers.js'
+import { setForestGround, setIcyGround, setDesertGround } from '../../provider.js'
 
 export class Scenery {
 

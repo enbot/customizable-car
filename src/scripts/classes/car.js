@@ -1,8 +1,7 @@
-import { car1, car2 } from '../providers/providers.js'
+import { car1, car2 } from '../../provider.js'
 import { Abstract } from './abstract.js'
 
 export class Car extends Abstract {
-
 
     constructor() {
         super()._ref = document.querySelector(".car")
