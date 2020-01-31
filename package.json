@@ -1,7 +1,7 @@
 {
   "name": "customcar",
   "version": "1.0.0",
-  "description": "A random car that just rides forward forever",
+  "description": "16-bit car that just rides forward forever",
   "main": "index.html",
   "scripts": {
     "start": "http-server",
