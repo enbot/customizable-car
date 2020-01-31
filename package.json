@@ -4,7 +4,8 @@
   "description": "16-bit car that just rides forward forever",
   "main": "index.html",
   "scripts": {
-    "start": "http-server",
+    "start": "gulp run",
+    "serve": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,5 +26,10 @@
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^2.0.0",
     "http-server": "^0.12.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6"
   }
 }
