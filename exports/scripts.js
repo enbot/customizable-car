@@ -31,12 +31,7 @@ class Car extends Abstract {
 
     nextFrame(frameIndex = 1) {
         this.style('boxShadow', frameIndex === 1 ? __frames.car1 : __frames.car2)
-        setTimeout(() =>
-            this.nextFrame(
-                frameIndex == 1 ?
-                    ++frameIndex :
-                    --frameIndex
-            ), this.speed)
+        setTimeout(() => this.nextFrame(frameIndex ^ 1), this.speed)
     }
 
     setSpeed(speed) {
