@@ -34,7 +34,7 @@ export function create() {
         let div = document.createElement('div');
         div.id = button.id
         div.innerHTML = button.text
-        div.classList = 'button'
+        div.classList = 'button hidden'
         hud.appendChild(div)
     }
 

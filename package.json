@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/notelho/customizable-car.git"
   },
-  "keywords": [
-    "car",
-    "customizable"
-  ],
+  "keywords": [],
   "author": "Nathan Botelho",
   "license": "MIT",
   "bugs": {

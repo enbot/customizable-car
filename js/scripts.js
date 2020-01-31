@@ -10,7 +10,8 @@ function demo() {
         ['nextBackground', 'nextScenery', 'nextColor', 'nextColor', 'nextColor', 'nextColor',],
     ]
 
-    let frames = 1500
+    let start = 3000
+    let frames = 2000
     let timer = frames
 
     for (let commands of chain) {
@@ -23,17 +24,21 @@ function demo() {
 
     setTimeout(() => {
 
-        document.querySelector("#button-speed")
-            .addEventListener("click", () => screen.nextSpeed(), false)
+        let speed = document.querySelector("#button-speed")
+        speed.classList.toggle('hidden')
+        speed.addEventListener("click", () => screen.nextSpeed(), false)
 
-        document.querySelector("#button-scenery")
-            .addEventListener("click", () => screen.nextScenery(), false)
+        let scenery = document.querySelector("#button-scenery")
+        scenery.classList.toggle('hidden')
+        scenery.addEventListener("click", () => screen.nextScenery(), false)
 
-        document.querySelector("#button-background")
-            .addEventListener("click", () => screen.nextBackground(), false)
+        let background = document.querySelector("#button-background")
+        background.classList.toggle('hidden')
+        background.addEventListener("click", () => screen.nextBackground(), false)
 
-        document.querySelector("#button-carcolor")
-            .addEventListener("click", () => screen.nextColor(), false)
+        let carcolor = document.querySelector("#button-carcolor")
+        carcolor.classList.toggle('hidden')
+        carcolor.addEventListener("click", () => screen.nextColor(), false)
 
     }, frames * chain.length)
 
