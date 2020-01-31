@@ -10,8 +10,11 @@
     height: 50px;
     width: 180px;
     font-size: 25px;
-    border-radius: 35px;
+    border-radius: 15px;
     z-index: 666;
+    opacity: 0;
+    margin-right: 3em;
+    animation: appear 200ms ease-in 1 forwards;
 }
 
 .button:hover::before {
@@ -31,7 +34,7 @@
     bottom: 4px;
     height: 50px;
     width: 180px;
-    border-radius: 35px;
+    border-radius: 15px;
     background: transparent;
     z-index: 667;
     border: solid 3px #e9e9e9;
@@ -64,7 +67,7 @@
 .button#button-speed {
     right: 610px;
     bottom: 10px;
-    background-image: repeating-linear-gradient(45deg, #085a0c, #085a0c 0.5em, #00380e 0.5em, #00380e 1em);
+    background-image: repeating-linear-gradient(45deg, #087238, #087238 0.5em, #055c2c 0.5em, #055c2c 1em);
 }
 
 .button.hidden{

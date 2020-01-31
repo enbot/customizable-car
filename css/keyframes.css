@@ -117,3 +117,14 @@
         margin-right: 3em;
     }
 }
+
+@keyframes appear {
+    0% {
+        margin-right: 0;
+        opacity: 0;
+    }
+    100% {
+        margin-right: 1em;
+        opacity: 1;
+    }
+}
