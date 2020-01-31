@@ -1,5 +1,5 @@
 {
-  "name": "customizable-car",
+  "name": "customcar",
   "version": "1.0.0",
   "description": "A random car that just rides forward forever",
   "main": "index.html",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/notelho/customizable-car.git"
+    "url": "git+https://github.com/notelho/customcar.git"
   },
   "keywords": [],
   "author": "Nathan Botelho",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/notelho/customizable-car/issues"
+    "url": "https://github.com/notelho/customcar/issues"
   },
-  "homepage": "https://github.com/notelho/customizable-car#readme",
+  "homepage": "https://github.com/notelho/customcar#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
