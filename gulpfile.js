@@ -7,21 +7,21 @@ const minifyhtml = require("gulp-minify-html")
 const browserSync = require("browser-sync").create()
 
 gulp.task("html", function () {
-    return gulp.src('./exports/*.html')
+    return gulp.src('./dist/*.html')
         .pipe(minifyhtml())
         .pipe(gulp.dest('./build/'))
         .pipe(browserSync.reload({ stream: true }))
 })
 
 gulp.task('css', () => {
-    return gulp.src('./exports/*.css')
+    return gulp.src('./dist/*.css')
         .pipe(minifycss())
         .pipe(gulp.dest('./build/'))
         .pipe(browserSync.reload({ stream: true }))
 })
 
 gulp.task("js", function () {
-    return gulp.src("./exports/*.js")
+    return gulp.src("./dist/*.js")
         .pipe(terser())
         .pipe(gulp.dest('./build/'))
         .pipe(browserSync.reload({ stream: true }))
@@ -37,9 +37,9 @@ gulp.task("watchfiles", function () {
         ui: { port: 4201 }
     })
 
-    gulp.watch("./exports/*.html", gulp.series("html"))
-    gulp.watch("./exports/*.css", gulp.series("css"))
-    gulp.watch("./exports/*.js", gulp.series("js"))
+    gulp.watch("./dist/*.html", gulp.series("html"))
+    gulp.watch("./dist/*.css", gulp.series("css"))
+    gulp.watch("./dist/*.js", gulp.series("js"))
 })
 
 gulp.task('build', gulp.series(['html', 'css', 'js']))
