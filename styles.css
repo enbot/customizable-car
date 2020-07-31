@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Play');
 @import url('./src/stylesheets/variables.css');
-@import url('./src/stylesheets/button.css');
+@import url('./src/stylesheets/buttons.css');
 @import url('./src/stylesheets/keyframes.css');
 @import url('./src/stylesheets/objects.css');
-@import url('./src/stylesheets/media.css');
-@import url('./src/stylesheets/corner.css');
+@import url('./src/stylesheets/medias.css');
+@import url('./src/stylesheets/corners.css');
 
 html, body {
     margin: 0;
